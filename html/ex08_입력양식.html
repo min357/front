@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 서버에 데이터를 전달하기 위해서 사용 -->
+     <!-- 
+    action: 서버에 요청하려는 경로 이름 
+           action 속성에 값이 없는 경우 자기자신을 다시 호출
+    method: 요청 방식을 지정 
+    get방식(기본)-주소에 데이터를 포함-보안 취약,
+    post방식- body영역에 데이터를 담아서 전달 
+ name: 자바스크립트에서 폼을 선택할 때 많이 사용
+ target: 현재 위치가 아닌 다른창에 열도록 지정
+
+-->
+     <form action="ex08_로그인.html" method="get">
+<!-- 서버에 데이터를 전달하기 위해서는 form 태그로 감싸줘야 합니다! -->
+<!-- 폼 요소를 그룹으로 묶는 태그 -->
+
+
+<fieldset>
+    <!-- 그룹의 제목 -->
+<legend>상품 선택</legend>
+<!-- 
+type: input 필드의 종류를 결정
+name: 서버에 값을 전달하기 위한 필수 값
+id: 화면에서 요소를 선택하기 위한 값
+ -->
+id : <input type="text" name="id" value="abc"> <br>
+pw : <input type="password" name="pw" id="" value="1234"> <br>
+<!-- 
+제목 표시줄에
+get방식으로 호출 시 제목표시줄에 데이터를 가지고 갑니다
+?id=abc&pw=1234(쿼리스트링) -->
+<input type="submit" value="로그인">
+<input type="reset" value="입력필드 초기화">
+</fieldset>
+<fieldset>
+<legend>배송 정보</legend>
+
+</fieldset>
+     </form>
+</body>
+</html>
