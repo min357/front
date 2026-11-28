@@ -1,0 +1,16 @@
+.title{
+    text-align: right;
+background-color: black;
+color:rgba(250, 235, 215, 0.589);
+padding-right: 10px;
+}
+
+#shadow{
+    font-size: 2rem;
+font-weight: 900;
+    text-shadow: 5px 10px 3px #333;
+    letter-spacing: 10px;
+    word-spacing: 100px;
+
+}
+

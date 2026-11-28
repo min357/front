@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- 모바일 반응형을 위한 뷰포트 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레드향 주문하기</title>
+  <style>
+    /*  */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 15px;
+      color: #222;
+    }
+    h1 {
+      font-size: clamp(20px, 5vw, 26px);
+      margin-bottom: 15px;
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+      max-height: 240px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      display: block;
+    }
+    fieldset {
+      border: 1px solid #999;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      min-width: 0;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 5px;
+    }
+    .form-row {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .form-row label {
+      width: 90px;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row input[type="tel"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 8px;
+      border: 1px solid #888;
+      font-size: 14px;
+    }
+    .form-row input[type="date"] {
+      padding: 6px 8px;
+      border: 1px solid #888;
+      font-size: 14px;
+    }
+    .note {
+      font-size: 13px;
+      color: #555;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .buttons button {
+      padding: 10px 28px;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .buttons button:hover {
+      background-color: #eaeaea;
+    }
+
+    /* 모바일 화면 대응 (480px 이하) */
+    @media (max-width: 480px) {
+      fieldset {
+        padding: 15px;
+      }
+      .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+      }
+      .form-row label {
+        width: 100%;
+        font-size: 14px;
+      }
+      .form-row input[type="text"],
+      .form-row input[type="email"],
+      .form-row input[type="tel"],
+      .form-row input[type="date"] {
+        width: 100%;
+        min-width: 0;
+      }
+      .buttons button {
+        flex: 1;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>레드향 주문하기</h1>
+
+  <!-- 실제 레드향 이미지 파일 경로로 변경해 주세요 -->
+  <img src="redhyang.jpg" alt="레드향 이미지" class="banner">
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>배송 정보</legend>
+
+      <div class="form-row">
+        <label for="product">주문 상품</label>
+        <input type="text" id="product" name="product" value="상품용 3KG" readonly>
+      </div>
+
+      <div class="form-row">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="address">배송 주소</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="phone" placeholder="하이픈 빼고 입력해 주세요.(01012345678)" required>
+      </div>
+
+      <div class="form-row">
+        <label for="delivery-date">배송 지정</label>
+        <input type="date" id="delivery-date" name="delivery-date">
+        <span class="note">(주문일로부터 최소 3일 이후)</span>
+      </div>
+    </fieldset>
+
+    <div class="buttons">
+      <button type="submit">주문하기</button>
+      <button type="reset">취소하기</button>
+    </div>
+  </form>
+
+</body>
+</html>
